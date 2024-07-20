@@ -44,7 +44,7 @@ const BannerComponent =  () => {
                 <Row className="align-items-center">
                     <Col xs={12} md={6} xl={7}>
                         <span className="tagline">
-                            Hello from the beatiful Prague! 
+                            Hello from the beautiful Prague! 
                         </span>
                         <h1>
                              I am Muslimjon <span className="wrap">{text}</span>
