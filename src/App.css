@@ -68,6 +68,61 @@ input:focus, textarea:focus, select:focus {
   outline: none;
 }
 
+@media (max-width:768) {
+	main .container {
+		max-width: 100%;
+		padding: 0 0x;
+	}
+
+  .banner {
+    padding: 50px 0 50px 0 !important;
+  }
+}
+
+
+@media (max-width:768px) {
+	main .container {
+		max-width: 100%;
+		padding: 0 0x;
+	}
+
+  .banner {
+    padding: 100px 0 50px 0 !important;
+  }
+
+  .skills-list::before {
+    top: 55% !important;
+    height: 80% !important;
+    width: 40% !important;
+  }
+
+  .banner button {
+    margin: auto !important;
+  }
+
+  .navbar-nav {
+    align-content: space-between;
+    display: flex !important;
+    flex-direction: row !important;
+    align-content: space-between !important;
+    justify-content: center !important;
+  }
+
+  .navbar {
+    background-color: #272727 !important;
+  }
+
+  .navbar-text button {
+    padding: 5px !important;
+    margin-left: unset !important;
+  }
+
+  .skills {
+    padding-top: 0px !important;
+  }
+}
+
+
 @media (min-width:1700px) {
 	main .container {
 		max-width: 100%;
@@ -103,7 +158,7 @@ nav.navbar.scrolled {
 nav.navbar a.navbar-brand {
     width: 10%;
 }
-nav.navbar .navbar-nav .nav-link.navbar-link {
+nav.navbar .navbar-nav .navbar-link {
   font-weight: 500;
   color: #fff !important;
   letter-spacing: 0.8px;
@@ -158,15 +213,21 @@ span.navbar-text {
 }
 .navbar-text button {
   font-weight: 700;
-  color: #fff;
   border: 1px solid #fff;
-  padding: 18px 34px;
+  padding: 8px 24px;
   font-size: 18px;
-  margin-left: 18px;
 	position: relative;
 	background-color: transparent;
 	transition: 0.3s ease-in-out;
+  display: inline-block;
 }
+
+.navbar-text button > a {
+  color: white;
+  display: block;
+  text-wrap: nowrap;
+}
+
 .navbar-text button span {
   z-index: 1;
 }
@@ -181,7 +242,7 @@ span.navbar-text {
   z-index: -1;
   transition: 0.3s ease-in-out;
 }
-.navbar-text button:hover {
+.navbar-text button:hover > a {
   color: #121212;
 }
 .navbar-text button:hover::before {
@@ -193,7 +254,7 @@ span.navbar-text {
 nav.navbar .navbar-toggler:active,
 nav.navbar .navbar-toggler:focus {
 	outline: none;
-    box-shadow: none;
+  box-shadow: none;
 }
 nav.navbar .navbar-toggler-icon {
   width: 24px;
@@ -296,7 +357,6 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .banner a {
   text-decoration: none;
   color: inherit;
-
 }
 
 @keyframes updown {
@@ -384,43 +444,4 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   text-align: left;
   width: 100%;
   font-size: small;
-}
-
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }

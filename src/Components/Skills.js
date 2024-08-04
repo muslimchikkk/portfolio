@@ -58,6 +58,13 @@ const skills = [
     }
 ]
 
+const Skill = ({ key, ...skill }) => (
+    <div key ={key} className='skills-item'>
+        <FontAwesomeIcon icon={skill.icon} />
+        <h3>{skill.name}</h3>
+        <div className="skills-item-description">{skill.description}</div>
+    </div> 
+);
 
 const Skills = () => {
     return (
@@ -67,16 +74,12 @@ const Skills = () => {
                     My skills
                 </div>
                 <div className="skills-description">
-                    Skilled in designing and implementing scalable, maintainable software systems using OOP and design patterns.
+                    Skilled in designing and implementing scalable, maintainable software systems using OOP and other design patterns.
                 </div>
                 <div className="skills-list">
                 {
                     skills.map((skill, key) => (
-                        <div key ={key} className='skills-item'>
-                            <FontAwesomeIcon icon={skill.icon} />
-                            <h3>{skill.name}</h3>
-                            <div className="skills-item-description">{skill.description}</div>
-                        </div> 
+                        <Skill {...skill} key={key} /> 
                     ))
                 }
                 </div>
